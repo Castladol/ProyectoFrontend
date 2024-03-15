@@ -1,0 +1,7 @@
+#card-into-trending {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.pagination, .card-movie {
+  cursor: pointer;
+}

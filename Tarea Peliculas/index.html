@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movies</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <style>
+      .carousel-card {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: rgba(255, 255, 255, 0.8);
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          width: 75vw;
+      }
+  
+      .carousel-item {
+          position: relative;
+      }
+  
+      .card {
+          border: none;
+      }
+  </style>
+  
+</head>
+
+<body>
+  <!-- Carousel -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner position-relative w-100">
+      <!-- Contenido extraido desde la API-->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- End Carousel -->
+  <!-- Nav Header -->
+  <nav class="navbar sticky-top  navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        Movies
+      </a>
+    </div>
+  </nav>
+  <!-- End Nav Header -->
+  <!-- List Movies -->
+  <div class="container-fluid mt-4">
+    <div id="list-movies" class="row w100"></div>
+    <div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" onclick="prevPage()">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" onclick="nextPage()">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- End List Movies-->
+  <!-- Alerts -->
+  <div id="error-get-top-movies" class="alert alert-danger d-none" role="alert">
+    Ocurrio un error al intentar consultar las peliculas mas populares.
+  </div>
+  <div id="error-get-list-movies" class="alert alert-danger d-none" role="alert">
+    Ocurrio un error al intentar consultar el listado de peliculas.
+  </div>
+  <!-- End Alerts-->
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/trending.js"></script>
+  <script src="assets/js/movies.js"></script>
+</body>
+
+</html>
